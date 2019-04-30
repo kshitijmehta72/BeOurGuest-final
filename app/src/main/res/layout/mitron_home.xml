@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mclayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mitron">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:background="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mstag_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="35dp"
+                android:text="Stags :"
+                android:textAlignment="viewStart"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mcuple_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mbutton2"
+                app:layout_constraintVertical_bias="0.634" />
+
+            <LinearLayout
+                android:id="@+id/mSliderDots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mviewPager1">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mcuple_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Couples :"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/mstag_text"
+                app:layout_constraintTop_toBottomOf="@+id/mbutton_add" />
+
+            <Button
+                android:id="@+id/mbutton_sub"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/ic_remove_circle_outline_black_24dp"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toTopOf="@+id/mbutton_sub2"
+                app:layout_constraintStart_toEndOf="@+id/mstag_count"
+                app:layout_constraintTop_toBottomOf="@+id/mbutton2" />
+
+            <TextView
+                android:id="@+id/mcouple_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="9dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/mbutton_sub2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/mstag_count"
+                app:layout_constraintTop_toBottomOf="@+id/mstag_count"
+                tools:text="0" />
+
+            <Button
+                android:id="@+id/mbutton_add2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ic_add_circle_outline_black_24dp"
+                android:onClick="onClick"
+                app:layout_constraintEnd_toStartOf="@+id/mstag_count"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/mbutton_add"
+                app:layout_constraintTop_toBottomOf="@+id/mbutton_add" />
+
+            <Button
+                android:id="@+id/mbutton_add"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_add_circle_outline_black_24dp"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toTopOf="@+id/mbutton_add2"
+                app:layout_constraintEnd_toStartOf="@+id/mstag_count"
+                app:layout_constraintStart_toEndOf="@+id/mstag_text"
+                app:layout_constraintTop_toBottomOf="@+id/mbutton2" />
+
+            <TextView
+                android:id="@+id/mbutton2"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:text="Date_Picker"
+                app:layout_constraintBottom_toTopOf="@+id/mclayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mdescription" />
+
+            <TextView
+                android:id="@+id/mstag_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="16dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/mcouple_count"
+                app:layout_constraintEnd_toStartOf="@+id/mbutton_sub"
+                app:layout_constraintStart_toEndOf="@+id/mbutton_add"
+                app:layout_constraintTop_toBottomOf="@+id/mbutton2"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/mstag_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:text="x 1500 ="
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/mbutton_sub"
+                app:layout_constraintTop_toBottomOf="@+id/mbutton2" />
+
+            <Button
+                android:id="@+id/mbutton_sub2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/ic_remove_circle_outline_black_24dp"
+                android:onClick="onClick"
+                app:layout_constraintStart_toStartOf="@+id/mbutton_sub"
+                app:layout_constraintTop_toBottomOf="@+id/mbutton_sub" />
+
+            <TextView
+                android:id="@+id/mcouple_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="4dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mdivider"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mviewPager1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mcouplpe_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="8dp"
+                android:text="x 2500 ="
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/mdivider"
+                app:layout_constraintStart_toEndOf="@+id/mbutton_sub2"
+                app:layout_constraintTop_toBottomOf="@+id/mstag_price"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/mstag_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="18dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mcouple_total"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/mdivider"
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/background_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mcouple_total" />
+
+            <View
+                android:id="@+id/mdivider2"
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="100dp"
+                android:background="@android:color/background_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mtextView13" />
+
+            <TextView
+                android:id="@+id/mtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="225dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="65dp"
+                android:layout_marginBottom="20dp"
+                android:text="Total :"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/mtextView12"
+                app:layout_constraintEnd_toStartOf="@+id/mtotal_amt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mdivider" />
+
+            <TextView
+                android:id="@+id/mtotal_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="19dp"
+                android:text="0.00"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mclayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mdivider" />
+
+            <TextView
+                android:id="@+id/mtextView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="65dp"
+                android:text="Service Charge @5% :"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/mtextView13"
+                app:layout_constraintHorizontal_bias="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mtotal" />
+
+            <TextView
+                android:id="@+id/mtextView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="19dp"
+                android:text="0.00"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mtotal_amt" />
+
+            <TextView
+                android:id="@+id/mgrandtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="16dp"
+                android:text="Grand Total :"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mdivider2" />
+
+            <TextView
+                android:id="@+id/mgrandtotal_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="16dp"
+                android:text="0.00"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mbutton4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mdivider2" />
+
+            <Button
+                android:id="@+id/mbutton4"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="117dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="117dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="onmBookClick"
+                android:text="Proceed to Payment"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mgrandtotal" />
+
+            <TextView
+                android:id="@+id/mdescription"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="Luxury airport hotel's atmospheric bar furnished in dark colours offering snacks and music."
+                android:textColor="@color/gold"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/mbutton2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.521"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mark_text" />
+
+            <TextView
+                android:id="@+id/mark_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/aladin"
+                android:text="M.I.T.R.O.N."
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mdescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mviewPager1" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/mexpandFAB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_list_24"
+                app:backgroundTint="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@drawable/baseline_list_24" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/mmapFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_directions_24"
+                android:visibility="invisible"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/mzomatoFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_fastfood_24"
+                android:visibility="invisible"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/mimageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="731dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0.2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_black" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

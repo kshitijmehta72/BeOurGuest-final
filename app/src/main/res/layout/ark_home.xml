@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ark">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:background="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/stag_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="35dp"
+                android:text="Stags :"
+                android:textAlignment="viewStart"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cuple_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button2"
+                app:layout_constraintVertical_bias="0.634" />
+
+            <LinearLayout
+                android:id="@+id/SliderDots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager1">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cuple_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Couples :"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/stag_text"
+                app:layout_constraintTop_toBottomOf="@+id/button_add" />
+
+            <Button
+                android:id="@+id/button_sub"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/ic_remove_circle_outline_black_24dp"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toTopOf="@+id/button_sub2"
+                app:layout_constraintStart_toEndOf="@+id/stag_count"
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+            <TextView
+                android:id="@+id/couple_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="9dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/button_sub2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/stag_count"
+                app:layout_constraintTop_toBottomOf="@+id/stag_count"
+                tools:text="0" />
+
+            <Button
+                android:id="@+id/button_add2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ic_add_circle_outline_black_24dp"
+                android:onClick="onClick"
+                app:layout_constraintEnd_toStartOf="@+id/stag_count"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/button_add"
+                app:layout_constraintTop_toBottomOf="@+id/button_add" />
+
+            <Button
+                android:id="@+id/button_add"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_add_circle_outline_black_24dp"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toTopOf="@+id/button_add2"
+                app:layout_constraintEnd_toStartOf="@+id/stag_count"
+                app:layout_constraintStart_toEndOf="@+id/stag_text"
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+            <TextView
+                android:id="@+id/button2"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:text="Date_Picker"
+                app:layout_constraintBottom_toTopOf="@+id/clayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+            <TextView
+                android:id="@+id/stag_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="16dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/couple_count"
+                app:layout_constraintEnd_toStartOf="@+id/button_sub"
+                app:layout_constraintStart_toEndOf="@+id/button_add"
+                app:layout_constraintTop_toBottomOf="@+id/button2"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/stag_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:text="x 1500 ="
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/button_sub"
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+            <Button
+                android:id="@+id/button_sub2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/ic_remove_circle_outline_black_24dp"
+                android:onClick="onClick"
+                app:layout_constraintStart_toStartOf="@+id/button_sub"
+                app:layout_constraintTop_toBottomOf="@+id/button_sub" />
+
+            <TextView
+                android:id="@+id/couple_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="4dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/couplpe_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="8dp"
+                android:text="x 2500 ="
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/divider"
+                app:layout_constraintStart_toEndOf="@+id/button_sub2"
+                app:layout_constraintTop_toBottomOf="@+id/stag_price"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/stag_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="18dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/couple_total"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/background_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/couple_total" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="100dp"
+                android:background="@android:color/background_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="225dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="65dp"
+                android:layout_marginBottom="20dp"
+                android:text="Total :"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView12"
+                app:layout_constraintEnd_toStartOf="@+id/total_amt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/total_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="19dp"
+                android:text="0.00"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/clayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="65dp"
+                android:text="Service Charge @5% :"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView13"
+                app:layout_constraintHorizontal_bias="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/total" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="19dp"
+                android:text="0.00"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/total_amt" />
+
+            <TextView
+                android:id="@+id/grandtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="16dp"
+                android:text="Grand Total :"
+                android:textColor="@color/inActive_state_submit_button"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <TextView
+                android:id="@+id/grandtotal_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="16dp"
+                android:text="0.00"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="117dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="117dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="onBookClick"
+                android:text="Proceed to Payment"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/grandtotal" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:text="Luxury airport hotel's atmospheric bar furnished in dark colours offering snacks and music."
+                android:textColor="@color/gold"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/button2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.521"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ark_text" />
+
+            <TextView
+                android:id="@+id/ark_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/aladin"
+                android:text="ARK 2.0"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager1" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/expandFAB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_list_24"
+                app:backgroundTint="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@drawable/baseline_list_24" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/mapFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_directions_24"
+                android:visibility="invisible"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/zomatoFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:src="@drawable/baseline_fastfood_24"
+                android:visibility="invisible"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="731dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0.2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_black" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
